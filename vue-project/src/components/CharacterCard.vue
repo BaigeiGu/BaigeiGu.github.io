@@ -1,5 +1,7 @@
 <script setup>
 import { ref } from 'vue'
+
+
 const props = defineProps({
     Characterdata: { type: Object, required: true }
 })
@@ -11,20 +13,27 @@ function change_name() {
 }
 
 function copy(name) {
-    navigator.clipboard.writeText(name['zh-cn'] + ' ' + name['en'])
+    navigator.clipboard.writeText(name['zh'] + ' ' + name['en'])
+
+    ElNotification.success({
+        title: 'Success',
+        message: 'Copiled.',
+    })
+
 }
+
 </script>
 
 <template>
-    <div class="character" @click="change_name">
-        <img class="character-avatar" v-bind:src="'character-images/' + props.Characterdata['image']" />
-        <span class="character-name">
-            <span class="character-name-zh">{{ props.Characterdata['name'][name_index]['zh-cn'] }}</span>
+    <div class="character">
+        <img class="character-avatar" @click="change_name"
+            v-bind:src="'character-images/' + props.Characterdata['image']" />
+        <span class="character-name" @click="copy(props.Characterdata['name'][name_index])">
+            <span class="character-name-zh">{{ props.Characterdata['name'][name_index]['zh'] }}</span>
             <br />
             <span class="character-name-en">{{ props.Characterdata['name'][name_index]['en'] }}</span>
         </span>
-        <img v-if="props.Characterdata['name'].length > 1" @click="copy(props.Characterdata['name'][name_index])"
-            src="/copy.svg" class="copy-btn" />
+
     </div>
 </template>
 
@@ -70,10 +79,10 @@ function copy(name) {
     width: 40em;
     opacity: 1;
     transition: opacity 0.2s;
-    user-select:none;
+    user-select: none;
 }
 
-.character-name-cn {
+.character-name-zh {
     font-size: 0.8em;
     line-height: 2em;
 }
@@ -82,9 +91,6 @@ function copy(name) {
     font-size: 1.2em;
 }
 
-.character-name-anime .character-name-comic {
-    font-size: 1.5em;
-}
 
 .copy-btn {
     position: absolute;

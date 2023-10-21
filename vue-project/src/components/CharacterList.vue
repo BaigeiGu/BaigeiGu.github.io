@@ -1,12 +1,12 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 import CharacterCard from './CharacterCard.vue'
 import axios from 'axios'
 
 var character_data = {}
 var character_list = ref([])
 
-function updateData(){
+function updateData() {
     axios.get('/characters.json').then((res) => {
         character_data = res.data
         character_list.value = character_data['data']
@@ -21,7 +21,7 @@ updateData()
             <CharacterCard v-bind:Characterdata="character" />
         </div>
     </div>
-    <button @click="updateData">Refresh</button>
+    <!-- <button class='refresh_btn' @click="updateData">Refresh</button> -->
 </template>
 
 <style>
@@ -46,5 +46,23 @@ updateData()
     .characters-list {
         font-size: 0.7em;
     }
+}
+
+.refresh_btn {
+    font-size: 1em;
+    padding: 1em;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .12);
+    border-radius: .4em;
+    align-items: center;
+    cursor: pointer;
+    margin: 1em;
+    margin-bottom: 0;
+    transition: border-color .2s;
+}
+
+.refresh_btn:hover {
+    border-color: #4096ff;
+    transition: border-color .2s;
 }
 </style>

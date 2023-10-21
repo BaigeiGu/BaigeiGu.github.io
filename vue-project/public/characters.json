@@ -7,11 +7,11 @@
             "name": [
                 {
                     "en": "Sibuxiang",
-                    "zh-cn": "四不像"
+                    "zh": "四不像"
                 },
                 {
                     "en": "Deer Sibuxiang",
-                    "zh-cn": "四不像"
+                    "zh": "四不像"
                 }
             ]
         },
@@ -21,11 +21,11 @@
             "name": [
                 {
                     "en": "Qilin Sibuxiang",
-                    "zh-cn": "四不相"
+                    "zh": "四不相"
                 },
                 {
                     "en": "Sibuxiang",
-                    "zh-cn": "四不相"
+                    "zh": "四不相"
                 }
             ]
         },
@@ -35,11 +35,11 @@
             "name": [
                 {
                     "en": "Tianlu",
-                    "zh-cn": "天禄"
+                    "zh": "天禄"
                 },
                 {
                     "en": "Pipi",
-                    "zh-cn": "皮皮"
+                    "zh": "皮皮"
                 }
             ]
         },
@@ -49,7 +49,7 @@
             "name": [
                 {
                     "en": "Bixie",
-                    "zh-cn": "辟邪"
+                    "zh": "辟邪"
                 }
             ]
         },
@@ -59,7 +59,7 @@
             "name": [
                 {
                     "en": "Tuye",
-                    "zh-cn": "兔爷"
+                    "zh": "兔爷"
                 }
             ]
         },
@@ -69,11 +69,11 @@
             "name": [
                 {
                     "en": "Hetao",
-                    "zh-cn": "核桃"
+                    "zh": "核桃"
                 },
                 {
                     "en": "Walnut",
-                    "zh-cn": "核桃"
+                    "zh": "核桃"
                 }
             ]
         },
@@ -83,7 +83,51 @@
             "name": [
                 {
                     "en": "Diting",
-                    "zh-cn": "谛听"
+                    "zh": "谛听"
+                }
+            ]
+        },
+        {
+            "id": "huajiao",
+            "image": "花椒.png",
+            "name": [
+                {
+                    "en": "Huajiao",
+                    "zh": "花椒"
+                }
+            ]
+        },
+        {
+            "id": "hundun",
+            "image": "混沌-角色按钮用图.png",
+            "name": [
+                {
+                    "en": "Hundun",
+                    "zh": "混沌"
+                },
+                {
+                    "en": "Chaos",
+                    "zh": "混沌"
+                }
+            ]
+        },
+        {
+            "id": "dijiang",
+            "image": "帝江-角色按钮用图.png",
+            "name": [
+                {
+                    "en": "Dijiang",
+                    "zh": "混沌"
+                }
+            ]
+        },
+        {
+            "id": "fuku",
+            "image": "福仔-角色按钮用图.png",
+            "name": [
+                {
+                    "en": "Fuku",
+                    "zh": "福仔"
                 }
             ]
         }
