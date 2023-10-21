@@ -25,6 +25,7 @@ axios.get('/characters.json').then(
     grid-template-rows: auto;
     justify-content: space-between;
     justify-items: center;
+    gap: 1em;
 }
 
 @media screen and (max-width: 620px) {
