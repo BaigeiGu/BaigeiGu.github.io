@@ -1,0 +1,91 @@
+{
+    "ver": 0.1,
+    "data": [
+        {
+            "id": "sibuxiangdeer",
+            "image": "四不像-角色按钮用图.png",
+            "name": [
+                {
+                    "en": "Sibuxiang",
+                    "zh-cn": "四不像"
+                },
+                {
+                    "en": "Deer Sibuxiang",
+                    "zh-cn": "四不像"
+                }
+            ]
+        },
+        {
+            "id": "sibuxiangqilin",
+            "image": "四不相-角色按钮用图.png",
+            "name": [
+                {
+                    "en": "Qilin Sibuxiang",
+                    "zh-cn": "四不相"
+                },
+                {
+                    "en": "Sibuxiang",
+                    "zh-cn": "四不相"
+                }
+            ]
+        },
+        {
+            "id": "tianlu",
+            "image": "天禄-角色按钮用图.png",
+            "name": [
+                {
+                    "en": "Tianlu",
+                    "zh-cn": "天禄"
+                },
+                {
+                    "en": "Pipi",
+                    "zh-cn": "皮皮"
+                }
+            ]
+        },
+        {
+            "id": "bixie",
+            "image": "辟邪-角色按钮用图.png",
+            "name": [
+                {
+                    "en": "Bixie",
+                    "zh-cn": "辟邪"
+                }
+            ]
+        },
+        {
+            "id": "tuye",
+            "image": "兔爷-角色按钮用图.png",
+            "name": [
+                {
+                    "en": "Tuye",
+                    "zh-cn": "兔爷"
+                }
+            ]
+        },
+        {
+            "id": "hetao",
+            "image": "核桃-角色按钮用图.png",
+            "name": [
+                {
+                    "en": "Hetao",
+                    "zh-cn": "核桃"
+                },
+                {
+                    "en": "Walnut",
+                    "zh-cn": "核桃"
+                }
+            ]
+        },
+        {
+            "id": "diting",
+            "image": "谛听-角色按钮用图.png",
+            "name": [
+                {
+                    "en": "Diting",
+                    "zh-cn": "谛听"
+                }
+            ]
+        }
+    ]
+}
