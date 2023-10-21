@@ -1,0 +1,37 @@
+<script setup>
+import { ref } from 'vue';
+import CharacterCard from './CharacterCard.vue';
+import axios from 'axios'
+
+var CharactersData = {}
+const Characterslist = ref([])
+axios.get('/characters.json').then(
+    (e) => {
+        CharactersData = e.data
+        Characterslist.value = CharactersData['data']
+        console.log(Characterslist)
+    }
+)
+</script>
+<template>
+    <div class="characters-list">
+        <CharacterCard v-for="character in Characterslist" :key="character['id']" v-bind:CharacterCardData="character" />
+    </div>
+</template>
+<style scoped>
+.characters-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 18em);
+    grid-template-rows: auto;
+    justify-content: space-between;
+    justify-items: center;
+}
+
+@media screen and (max-width: 620px) {
+    .characters-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+</style>

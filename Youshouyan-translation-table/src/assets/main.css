@@ -1,0 +1,13 @@
+body {
+    padding: 5em;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 1em;
+    }
+}
+
+#app {
+    font-family: MiSans,Harmony Sans SC,Noto Sans SC,sans-serif;
+}
