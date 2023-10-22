@@ -86,6 +86,15 @@
                     "zh": "谛听"
                 }
             ]
+        },{
+            "id": "qinghuo",
+            "image": "擎火.png",
+            "name": [
+                {
+                    "en": "Qinghuo",
+                    "zh": "擎火"
+                }
+            ]
         },
         {
             "id": "huajiao",
@@ -122,7 +131,7 @@
             ]
         },
         {
-            "id": "fuku",
+            "id": "fuzai",
             "image": "福仔-角色按钮用图.png",
             "name": [
                 {
@@ -132,6 +141,15 @@
                 {
                     "en": "Fuku",
                     "zh": "福仔"
+                }
+            ]
+        },{
+            "id": "xiangtai",
+            "image": "翔太-角色按钮用图.png",
+            "name": [
+                {
+                    "en": "Xiangtai",
+                    "zh": "翔太"
                 }
             ]
         },
