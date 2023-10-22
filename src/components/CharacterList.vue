@@ -27,8 +27,10 @@ axios.get('/characters.json').then(
     justify-items: center;
     gap: 1em;
 }
-
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 640px) {
+    .characters-list {grid-template-columns: repeat(auto-fill, 17em);}
+}
+@media screen and (max-width: 610px) {
     .characters-list {
         display: flex;
         flex-wrap: wrap;

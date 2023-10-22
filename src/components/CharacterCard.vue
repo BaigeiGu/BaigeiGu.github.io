@@ -81,7 +81,7 @@ function copyName(name) {
     font-weight: 700;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 640px) {
     .character {
         font-size: 0.8em;
     }
