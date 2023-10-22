@@ -134,6 +134,65 @@
                     "zh": "福仔"
                 }
             ]
+        },
+        {
+            "id": "lei",
+            "image": "猫猫泪.png",
+            "name": [
+                {
+                    "en": "Lei",
+                    "zh": "猫猫泪"
+                }
+            ]
+        },{
+            "id": "panhu",
+            "image": "盘湖-角色按钮用图.png",
+            "name": [
+                {
+                    "en": "Panhu",
+                    "zh": "盘湖"
+                }
+            ]
+        },{
+            "id": "qiongqi",
+            "image": "穷奇.png",
+            "name": [
+                {
+                    "en": "Qiongqi",
+                    "zh": "穷奇"
+                }
+            ]
+        },{
+            "id": "xiezhi",
+            "image": "獬豸-角色按钮用图.png",
+            "name": [
+                {
+                    "en": "Xiezhi",
+                    "zh": "獬豸"
+                }
+            ]
+        },{
+            "id": "lizhi",
+            "image": "荔枝-角色按钮用图.png",
+            "name": [
+                {
+                    "en": "Lizhi",
+                    "zh": "荔枝"
+                },
+                {
+                    "en": "Lychee",
+                    "zh": "荔枝"
+                }
+            ]
+        },{
+            "id": "zhuangzhuang",
+            "image": "壮壮-角色按钮用图.png",
+            "name": [
+                {
+                    "en": "Zhuangzhuang",
+                    "zh": "壮壮"
+                }
+            ]
         }
     ]
 }
