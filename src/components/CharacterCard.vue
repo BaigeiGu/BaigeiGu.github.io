@@ -4,7 +4,9 @@ const props = defineProps({ CharacterCardData: Object })
 const name_index = ref(0)
 
 function changeName() { name_index.value = (name_index.value + 1) % props.CharacterCardData['name'].length }
-function copyName(name) {
+function copyName() {
+    var name = props.CharacterCardData['name'][name_index.value]
+    console.log(name)
     navigator.clipboard.writeText(name['zh'] + ' ' + name['en']); ElNotification({
         title: 'Success',
         message: 'Copiled.',
@@ -16,7 +18,7 @@ function copyName(name) {
 <template>
     <div class="character">
         <img class="character-img" :src="'character-images/' + props.CharacterCardData['image']" @click="changeName" />
-        <span class="character-name" @click="copyName(props.CharacterCardData['name'][name_index])">
+        <span class="character-name" @click="copyName">
             <span class="character-name-zh">{{ props.CharacterCardData['name'][name_index]['zh'] }}</span>
             <br />
             <span class="character-name-en">{{ props.CharacterCardData['name'][name_index]['en'] }}</span>
@@ -55,7 +57,8 @@ function copyName(name) {
     margin-right: 1em;
     transition: all .2s;
     border-radius: 1em 0 0 1em;
-    -webkit-mask-image: radial-gradient(rgba(255,255,255,255)60%, rgba(255,255,255,0) 100%);
+    mask-image: radial-gradient(rgba(255, 255, 255, 255)60%, rgba(255, 255, 255, 0) 100%);
+    -webkit-mask-image: radial-gradient(rgba(255, 255, 255, 255)60%, rgba(255, 255, 255, 0) 100%);
 }
 
 
@@ -88,10 +91,10 @@ function copyName(name) {
     }
 }
 
-@media screen and (max-width: 370px) {.character {
+@media screen and (max-width: 370px) {
+    .character {
         width: 17em;
         font-size: 0.7em;
     }
 }
-
 </style>
