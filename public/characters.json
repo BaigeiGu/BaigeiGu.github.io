@@ -211,6 +211,18 @@
                     "zh": "壮壮"
                 }
             ]
+        },{
+            "id": "tubaoshu",
+            "image": "吐宝鼠-角色按钮用图.png",
+            "name": [
+                {
+                    "en": "Tubaoshu",
+                    "zh": "吐宝鼠"
+                },{
+                    "en": "Jewel Spitting Mongoose",
+                    "zh": "吐宝鼠"
+                }
+            ]
         }
     ]
 }
