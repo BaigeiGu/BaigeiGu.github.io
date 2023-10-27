@@ -1,12 +1,11 @@
 <script setup>
 import { ref } from 'vue';
-const props = defineProps({ CharacterCardData: Object })
+const props = defineProps({ CharacterCardData: Object, la: String })
 const name_index = ref(0)
 
 function changeName() { name_index.value = (name_index.value + 1) % props.CharacterCardData['name'].length }
 function copyName() {
     var name = props.CharacterCardData['name'][name_index.value]
-    console.log(name)
     navigator.clipboard.writeText(name['zh'] + ' ' + name['en']); ElNotification({
         title: 'Success',
         message: 'Copiled.',
@@ -19,9 +18,19 @@ function copyName() {
     <div class="character">
         <img class="character-img" :src="'character-images/' + props.CharacterCardData['image']" @click="changeName" />
         <span class="character-name" @click="copyName">
-            <span class="character-name-zh">{{ props.CharacterCardData['name'][name_index]['zh'] }}</span>
+            <span class="character-name-zh" :class="{
+                'character-name-main': (props.la == 'zh'),
+                'character-name-text': (props.la == 'en'),
+                'character-name-long':(props.CharacterCardData['name'][name_index]['zh'].length>10)
+            }">
+                {{ props.CharacterCardData['name'][name_index]['zh'] }}</span>
             <br />
-            <span class="character-name-en">{{ props.CharacterCardData['name'][name_index]['en'] }}</span>
+            <span class="character-name-en" :class="{
+                'character-name-main': (props.la == 'en'),
+                'character-name-text': (props.la == 'zh'),
+                'character-name-long':(props.CharacterCardData['name'][name_index]['en'].length>10)
+            }">{{
+    props.CharacterCardData['name'][name_index]['en'] }}</span>
         </span>
 
     </div>
@@ -29,8 +38,8 @@ function copyName() {
 <style scoped>
 .character {
     display: flex;
-    height: 6em;
-    width: 18em;
+    height: var(--item-height);
+    width: var(--item-width);
     align-items: center;
     border: 1px #d9d9d9 solid;
     border-radius: 1em;
@@ -52,8 +61,8 @@ function copyName() {
 }
 
 .character-img {
-    height: 6em;
-    width: 6em;
+    height: var(--item-height);
+    width: var(--item-height);
     margin-right: 1em;
     transition: all .2s;
     border-radius: 1em 0 0 1em;
@@ -63,26 +72,42 @@ function copyName() {
 
 
 .character:hover .character-img {
-    height: 8em;
-    width: 8em;
+    height: calc(var(--item-height) + 2em);
+    width: calc(var(--item-height) + 2em);
     transition: all .2s;
 }
 
 .character-name {
     font-family: var(--fonts-sans);
-    white-space: nowrap;
     opacity: 1;
     transition: opacity .2s;
 }
 
+.character-name-main {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.character-name-text {
+    font-size: 0.9em;
+    font-weight: 400;
+}
+
+.character-name-long.character-name-main {
+    font-size: 1.1em;
+}
+
+.character-name-long.character-name-text {
+    font-size: 0.7em;
+}
+
 .character-name-zh {
-    font-size: 0.8em;
     line-height: 2em;
+    transition: all .2s;
 }
 
 .character-name-en {
-    font-size: 1.2em;
-    font-weight: 700;
+    transition: all .2s;
 }
 
 @media screen and (max-width: 640px) {
@@ -93,7 +118,6 @@ function copyName() {
 
 @media screen and (max-width: 370px) {
     .character {
-        width: 17em;
         font-size: 0.7em;
     }
 }

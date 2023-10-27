@@ -1,0 +1,12 @@
+:root {
+    --item-height: 6em;
+    --item-width: 18em;
+    --name-font-size-en: 1.2em;
+    --name-font-size-zh: 0.8em;
+}
+
+@media screen and (max-width: 370px) {
+    :root {
+        --item-width: 17em;
+    }
+}

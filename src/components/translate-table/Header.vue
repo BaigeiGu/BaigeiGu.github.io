@@ -1,18 +1,10 @@
 <script setup>
-import { ref } from 'vue';
-
-
-const la = ref('en')
-const paw_file = ref('sibuxiangpaw.png')
-
-function changeLa() {
-    la.value = (la.value == 'en') ? 'zh' : 'en'
-    paw_file.value = (paw_file.value == 'sibuxiangpaw.png') ? 'tianlupaw.png' : 'sibuxiangpaw.png'
-
-}
+const props = defineProps(['la'])
+const emits = defineEmits(['changeLa'])
 </script>
 <template>
-    <header><img :src="paw_file" class="title-paw" @click="changeLa">
+    <header><img :src="(props.la == 'zh') ? 'sibuxiangpaw.png' : 'tianlupaw.png'"
+         class="title-paw" @click="$emit('changeLa')">
         <h1>Youshouyan Translation table</h1>
         <h2>有兽焉译名表</h2>
         <p v-if="la == 'en'">This translation table is made for easy communication. Chinese pinyin is preferred for
@@ -25,4 +17,5 @@ function changeLa() {
 .title-paw {
     float: right;
     width: 6em;
-}</style>
+}
+</style>

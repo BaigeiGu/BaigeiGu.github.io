@@ -1,13 +1,9 @@
 <script setup>
-import Header from './components/translate-table/Header.vue';
-import Characterslist from './components/translate-table/CharacterList.vue';
-import Footer from './components/translate-table/Footer.vue';
+import TranslateTable from './components/translate-table/TranslateTable.vue';
 </script>
 
 <template>
-    <Header />
-    <Characterslist />
-    <Footer />
+    <TranslateTable />
 </template>
 
 <style scoped></style>
