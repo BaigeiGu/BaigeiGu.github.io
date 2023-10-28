@@ -4,7 +4,7 @@ import { ref } from 'vue';
 import CharacterCard from './CharacterCard.vue';
 import axios from 'axios'
 
-const props = defineProps(['la','paw_file'])
+const props = defineProps(['la', 'paw_file'])
 var CharactersData = {}
 const Characterslist = ref([])
 axios.get('/characters.json').then(
@@ -16,9 +16,8 @@ axios.get('/characters.json').then(
 </script>
 <template>
     <div class="characters-list">
-        <CharacterCard 
-        v-for="character in Characterslist" 
-        :key="character['id']" 
+        <CharacterCard v-for="character in Characterslist" 
+        :key="character['id']"
         v-bind:CharacterCardData="character"
         :la="props.la" />
     </div>
@@ -45,4 +44,5 @@ axios.get('/characters.json').then(
         flex-wrap: wrap;
         justify-content: center;
     }
-}</style>
+}
+</style>

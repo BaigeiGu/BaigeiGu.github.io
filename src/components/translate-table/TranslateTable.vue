@@ -15,6 +15,6 @@ function changeLa() {
 </script>
 <template>
     <Header :la="la" @changeLa="changeLa" />
-    <Characterslist :la="la"/>
-    <Footer :la="la"/>
+    <Characterslist :la="la" />
+    <Footer :la="la" />
 </template>

@@ -21,14 +21,14 @@ function copyName() {
             <span class="character-name-zh" :class="{
                 'character-name-main': (props.la == 'zh'),
                 'character-name-text': (props.la == 'en'),
-                'character-name-long':(props.CharacterCardData['name'][name_index]['zh'].length>10)
+                'character-name-long': (props.CharacterCardData['name'][name_index]['zh'].length > 10)
             }">
                 {{ props.CharacterCardData['name'][name_index]['zh'] }}</span>
             <br />
             <span class="character-name-en" :class="{
                 'character-name-main': (props.la == 'en'),
                 'character-name-text': (props.la == 'zh'),
-                'character-name-long':(props.CharacterCardData['name'][name_index]['en'].length>10)
+                'character-name-long': (props.CharacterCardData['name'][name_index]['en'].length > 10)
             }">{{
     props.CharacterCardData['name'][name_index]['en'] }}</span>
         </span>
