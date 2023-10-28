@@ -3,6 +3,7 @@ import Header from './Header.vue';
 import Characterslist from './CharacterList.vue';
 import Footer from './Footer.vue';
 
+
 import { ref } from 'vue';
 
 const la = ref('en')

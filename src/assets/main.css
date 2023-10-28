@@ -4,6 +4,11 @@
 
 html {
     line-height: unset;
+    color-scheme: light;
+}
+
+.dark{
+    color-scheme: dark;
 }
 
 .v-enter-active,
