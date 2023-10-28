@@ -13,3 +13,13 @@ body {
 #app {
     font-family: MiSans,Harmony Sans SC,Noto Sans SC,sans-serif;
 }
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}

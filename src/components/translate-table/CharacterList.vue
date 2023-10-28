@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 
 import CharacterCard from './CharacterCard.vue';
 import axios from 'axios'
@@ -7,19 +7,23 @@ import axios from 'axios'
 const props = defineProps(['la', 'paw_file'])
 var CharactersData = {}
 const Characterslist = ref([])
-axios.get('/characters.json').then(
-    (res) => {
-        CharactersData = res.data
-        Characterslist.value = CharactersData['data']
-    }
-)
+
+onMounted(() => {
+    axios.get('/characters.json').then(
+        (res) => {
+            CharactersData = res.data
+            Characterslist.value = CharactersData['data']
+        }
+    )
+})
+
 </script>
 <template>
     <div class="characters-list">
         <CharacterCard v-for="character in Characterslist" 
-        :key="character['id']"
+        :key="character['id']" 
         v-bind:CharacterCardData="character"
-        :la="props.la" />
+            :la="props.la" />
     </div>
 </template>
 <style scoped>
