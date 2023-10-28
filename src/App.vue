@@ -10,6 +10,7 @@ import Theme from './theme.json'
         <TranslateTable />
     </a-config-provider>
     <DarkmodeSwitch />
+    <a-back-top />
 </template>
 
 <style scoped></style>
