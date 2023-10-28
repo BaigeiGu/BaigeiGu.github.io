@@ -80,7 +80,6 @@ function copyName() {
 }
 
 .character-name {
-    font-family: var(--fonts-sans);
     opacity: 1;
     transition: opacity .2s;
 }
