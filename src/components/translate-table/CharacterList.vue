@@ -3,6 +3,7 @@ import { ref, onMounted } from 'vue';
 
 import CharacterCard from './CharacterCard.vue';
 import axios from 'axios'
+import { ElAlert } from 'element-plus';
 
 const props = defineProps(['la', 'paw_file'])
 var CharactersData = {}
@@ -12,7 +13,15 @@ onMounted(() => {
     axios.get('/characters.json').then(
         (res) => {
             CharactersData = res.data
-            Characterslist.value = CharactersData['data']
+            if (Object.prototype.toString.call(CharactersData) == '[object Object]') { Characterslist.value = CharactersData['data'] }
+            else {
+                ElNotification({
+                    title: 'Error',
+                    message: 'Cannot read data.',
+                    type: 'error',
+                    duration: 0
+                })
+            }
         }
     )
 })
@@ -20,9 +29,7 @@ onMounted(() => {
 </script>
 <template>
     <div class="characters-list">
-        <CharacterCard v-for="character in Characterslist" 
-        :key="character['id']" 
-        v-bind:CharacterCardData="character"
+        <CharacterCard v-for="character in Characterslist" :key="character['id']" v-bind:CharacterCardData="character"
             :la="props.la" />
     </div>
 </template>
