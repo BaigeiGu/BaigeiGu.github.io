@@ -1,10 +1,11 @@
 <script setup>
 const props = defineProps(['la'])
 const emits = defineEmits(['changeLa'])
+const paw_file = { en: 'sibuxiangpaw.png', zh: 'tianlupaw.png' }
 </script>
 <template>
-    <header><img :src="(props.la == 'zh') ? 'sibuxiangpaw.png' : 'tianlupaw.png'"
-         class="title-paw" @click="$emit('changeLa')">
+    <header>
+        <img :src="paw_file[props.la]" class="title-paw" @click="$emit('changeLa')">
         <h1>Youshouyan Translation table</h1>
         <h2>有兽焉译名表</h2>
         <p v-if="la == 'en'">This translation table is made for easy communication. Chinese pinyin is preferred for
