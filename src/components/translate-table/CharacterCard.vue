@@ -3,6 +3,8 @@ import { ref } from 'vue';
 const props = defineProps({ CharacterCardData: Object, la: String })
 const name_index = ref(0)
 
+const long_limit = 12
+
 function changeName() { name_index.value = (name_index.value + 1) % props.CharacterCardData['name'].length }
 function copyName() {
     var name = props.CharacterCardData['name'][name_index.value]
@@ -21,14 +23,14 @@ function copyName() {
             <span class="character-name-zh" :class="{
                 'character-name-main': (props.la == 'zh'),
                 'character-name-text': (props.la == 'en'),
-                'character-name-long': (props.CharacterCardData['name'][name_index]['zh'].length > 10)
+                'character-name-long': (props.CharacterCardData['name'][name_index]['zh'].length > long_limit)
             }">
                 {{ props.CharacterCardData['name'][name_index]['zh'] }}</span>
             <br />
             <span class="character-name-en" :class="{
                 'character-name-main': (props.la == 'en'),
                 'character-name-text': (props.la == 'zh'),
-                'character-name-long': (props.CharacterCardData['name'][name_index]['en'].length > 10)
+                'character-name-long': (props.CharacterCardData['name'][name_index]['en'].length > long_limit)
             }">{{
     props.CharacterCardData['name'][name_index]['en'] }}</span>
         </span>
