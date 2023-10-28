@@ -1,9 +1,10 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 
+import { message } from 'ant-design-vue';
+
 import CharacterCard from './CharacterCard.vue';
 import axios from 'axios'
-import { ElAlert } from 'element-plus';
 
 const props = defineProps(['la', 'paw_file'])
 var CharactersData = {}
@@ -15,12 +16,7 @@ onMounted(() => {
             CharactersData = res.data
             if (Object.prototype.toString.call(CharactersData) == '[object Object]') { Characterslist.value = CharactersData['data'] }
             else {
-                ElNotification({
-                    title: 'Error',
-                    message: 'Cannot read data.',
-                    type: 'error',
-                    duration: 0
-                })
+                message.error('Cannot read data.',0)
             }
         }
     )

@@ -14,7 +14,36 @@ function changeLa() {
 
 </script>
 <template>
-    <Header :la="la" @changeLa="changeLa" />
-    <Characterslist :la="la" />
-    <Footer :la="la" />
+    <div class="TranslateTable">
+        <Header :la="la" @changeLa="changeLa" />
+        <Characterslist :la="la" />
+        <Footer :la="la" />
+    </div>
 </template>
+
+<style scoped>
+.TranslateTable {
+    padding: 5em;
+}
+
+@media screen and (max-width: 768px) {
+    .TranslateTable {
+        padding: 1em;
+    }
+}
+</style>
+
+<style>
+:root {
+    --item-height: 6em;
+    --item-width: 18em;
+    --name-font-size-en: 1.2em;
+    --name-font-size-zh: 0.8em;
+}
+
+@media screen and (max-width: 370px) {
+    :root {
+        --item-width: 17em;
+    }
+}
+</style>

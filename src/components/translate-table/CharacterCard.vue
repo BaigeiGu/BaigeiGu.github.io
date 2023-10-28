@@ -1,18 +1,16 @@
 <script setup>
 import { ref } from 'vue';
+import { message } from 'ant-design-vue';
+
 const props = defineProps({ CharacterCardData: Object, la: String })
 const name_index = ref(0)
-
 const long_limit = 12
 
 function changeName() { name_index.value = (name_index.value + 1) % props.CharacterCardData['name'].length }
 function copyName() {
     var name = props.CharacterCardData['name'][name_index.value]
-    navigator.clipboard.writeText(name['zh'] + ' ' + name['en']); ElNotification({
-        title: 'Success',
-        message: 'Copiled.',
-        type: 'success'
-    })
+    navigator.clipboard.writeText(name['zh'] + ' ' + name['en']);
+    message.success('Copiled.')
 }
 
 </script>
