@@ -22,6 +22,6 @@ window.matchMedia("(prefers-color-scheme: dark)").addListener(switchDark.dark);
 window.matchMedia("(prefers-color-scheme: light)").addListener(switchDark.light);
 </script>
 
-<template>
+<!-- <template>
     <el-button round @click.stop="toggleDark()">DarkMode</el-button>
-</template>
+</template> -->
