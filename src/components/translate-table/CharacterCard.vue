@@ -121,4 +121,9 @@ function copyName() {
         font-size: 0.7em;
     }
 }
+
+html.dark .character {
+    border: 1px #232323 solid;
+    background-color: rgba(255, 255, 255, 0.1);
+}
 </style>
