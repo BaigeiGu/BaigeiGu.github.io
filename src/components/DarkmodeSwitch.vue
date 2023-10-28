@@ -4,11 +4,22 @@ import { useDark, useToggle } from '@vueuse/core'
 const isDark = useDark()
 const toggleDark = useToggle(isDark)
 
-var mqList = window.matchMedia('(prefers-color-scheme: dark)');
 
-mqList.addEventListener('change', (event) => {
-    toggleDark()
-});
+let switchDark = {
+    dark: (mediaQueryList) => {
+        if (mediaQueryList.matches) {
+            toggleDark()
+        }
+    },
+    light: (mediaQueryList) => {
+        if (mediaQueryList.matches) {
+            toggleDark()
+        }
+    },
+};
+
+window.matchMedia("(prefers-color-scheme: dark)").addListener(switchDark.dark);
+window.matchMedia("(prefers-color-scheme: light)").addListener(switchDark.light);
 </script>
 
 <template>
