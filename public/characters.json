@@ -5,11 +5,11 @@
             "image": "四不像-角色按钮用图.png",
             "name": [
                 {
-                    "en": "Sibuxiang",
+                    "en": "SiBuXiang",
                     "zh": "四不像"
                 },
                 {
-                    "en": "Deer Sibuxiang",
+                    "en": "Deer SiBuXiang",
                     "zh": "四不像"
                 }
             ]
@@ -19,11 +19,11 @@
             "image": "四不相-角色按钮用图.png",
             "name": [
                 {
-                    "en": "Qilin Sibuxiang",
+                    "en": "Qilin SiBuXiang",
                     "zh": "四不相"
                 },
                 {
-                    "en": "Sibuxiang",
+                    "en": "SiBuXiang",
                     "zh": "四不相"
                 }
             ]
@@ -33,7 +33,7 @@
             "image": "天禄-角色按钮用图.png",
             "name": [
                 {
-                    "en": "Tianlu",
+                    "en": "TianLu",
                     "zh": "天禄"
                 },
                 {
@@ -47,7 +47,7 @@
             "image": "辟邪-角色按钮用图.png",
             "name": [
                 {
-                    "en": "Bixie",
+                    "en": "BiXie",
                     "zh": "辟邪"
                 }
             ]
@@ -57,7 +57,7 @@
             "image": "兔爷-角色按钮用图.png",
             "name": [
                 {
-                    "en": "Tuye",
+                    "en": "TuYe",
                     "zh": "兔爷"
                 }
             ]
@@ -67,7 +67,7 @@
             "image": "核桃-角色按钮用图.png",
             "name": [
                 {
-                    "en": "Hetao",
+                    "en": "HeTao",
                     "zh": "核桃"
                 },
                 {
@@ -81,16 +81,17 @@
             "image": "谛听-角色按钮用图.png",
             "name": [
                 {
-                    "en": "Diting",
+                    "en": "DiTing",
                     "zh": "谛听"
                 }
             ]
-        },{
+        },
+        {
             "id": "qinghuo",
             "image": "擎火.png",
             "name": [
                 {
-                    "en": "Qinghuo",
+                    "en": "QingHuo",
                     "zh": "擎火"
                 }
             ]
@@ -100,7 +101,7 @@
             "image": "花椒.png",
             "name": [
                 {
-                    "en": "Huajiao",
+                    "en": "HuaJiao",
                     "zh": "花椒"
                 }
             ]
@@ -110,7 +111,7 @@
             "image": "混沌-角色按钮用图.png",
             "name": [
                 {
-                    "en": "Hundun",
+                    "en": "HunDun",
                     "zh": "混沌"
                 },
                 {
@@ -124,7 +125,7 @@
             "image": "帝江-角色按钮用图.png",
             "name": [
                 {
-                    "en": "Dijiang",
+                    "en": "DiJiang",
                     "zh": "帝江"
                 }
             ]
@@ -134,7 +135,7 @@
             "image": "福仔-角色按钮用图.png",
             "name": [
                 {
-                    "en": "Fuzai",
+                    "en": "FuZai",
                     "zh": "福仔"
                 },
                 {
@@ -142,12 +143,13 @@
                     "zh": "福仔"
                 }
             ]
-        },{
+        },
+        {
             "id": "xiangtai",
             "image": "翔太-角色按钮用图.png",
             "name": [
                 {
-                    "en": "Xiangtai",
+                    "en": "XiangTai",
                     "zh": "翔太"
                 }
             ]
@@ -161,39 +163,43 @@
                     "zh": "猫猫泪"
                 }
             ]
-        },{
+        },
+        {
             "id": "panhu",
             "image": "盘湖-角色按钮用图.png",
             "name": [
                 {
-                    "en": "Panhu",
+                    "en": "PanHu",
                     "zh": "盘湖"
                 }
             ]
-        },{
+        },
+        {
             "id": "qiongqi",
             "image": "穷奇.png",
             "name": [
                 {
-                    "en": "Qiongqi",
+                    "en": "QiongQi",
                     "zh": "穷奇"
                 }
             ]
-        },{
+        },
+        {
             "id": "xiezhi",
             "image": "獬豸-角色按钮用图.png",
             "name": [
                 {
-                    "en": "Xiezhi",
+                    "en": "XieZhi",
                     "zh": "獬豸"
                 }
             ]
-        },{
+        },
+        {
             "id": "lizhi",
             "image": "荔枝-角色按钮用图.png",
             "name": [
                 {
-                    "en": "Lizhi",
+                    "en": "LiZhi",
                     "zh": "荔枝"
                 },
                 {
@@ -201,25 +207,76 @@
                     "zh": "荔枝"
                 }
             ]
-        },{
+        },
+        {
             "id": "zhuangzhuang",
             "image": "壮壮-角色按钮用图.png",
             "name": [
                 {
-                    "en": "Zhuangzhuang",
+                    "en": "ZhuangZhuang",
                     "zh": "壮壮"
                 }
             ]
-        },{
+        },
+        {
             "id": "tubaoshu",
             "image": "吐宝鼠-角色按钮用图.png",
             "name": [
                 {
-                    "en": "Tubaoshu",
+                    "en": "TuBaoShu",
                     "zh": "吐宝鼠"
-                },{
+                },
+                {
                     "en": "Jewel Spitting Mongoose",
                     "zh": "吐宝鼠"
+                }
+            ]
+        },
+        {
+            "id": "jinjiao",
+            "image": "金角-角色按钮用图.png",
+            "name": [
+                {
+                    "en": "JinJiao",
+                    "zh": "金角"
+                },
+                {
+                    "en": "Gold Horn",
+                    "zh": "金角"
+                }
+            ]
+        },
+        {
+            "id": "yinjiao",
+            "image": "银角-角色按钮用图.png",
+            "name": [
+                {
+                    "en": "YinJiao",
+                    "zh": "银角"
+                },
+                {
+                    "en": "Silver Horn",
+                    "zh": "银角"
+                }
+            ]
+        },
+        {
+            "id": "erliang",
+            "image": "二两-角色按钮用图.png",
+            "name": [
+                {
+                    "en": "ErLiang",
+                    "zh": "二两"
+                }
+            ]
+        },
+        {
+            "id": "bajin",
+            "image": "八斤-角色按钮用图.png",
+            "name": [
+                {
+                    "en": "BaJin",
+                    "zh": "八斤"
                 }
             ]
         }
