@@ -16,7 +16,9 @@ function changeLa() {
 <template>
     <div class="TranslateTable">
         <Header :la="la" @changeLa="changeLa" />
+        <a-divider />
         <Characterslist :la="la" />
+        <a-divider />
         <Footer :la="la" />
     </div>
 </template>
