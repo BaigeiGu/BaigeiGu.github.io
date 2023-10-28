@@ -19,4 +19,9 @@ const paw_file = { en: 'sibuxiangpaw.png', zh: 'tianlupaw.png' }
     float: right;
     width: 6em;
 }
-</style>
+
+@media screen and (max-width: 370px) {
+    .title-paw {
+        width: 4em;
+    }
+}</style>
