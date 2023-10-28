@@ -48,7 +48,7 @@ function copyName() {
     background-color: rgba(255, 255, 255, .5);
     margin: 1em;
     box-shadow: 0 2px 0 rgba(0, 0, 0, .02);
-    transition: border-color .2s;
+    transition: all .2s;
     overflow: hidden;
 }
 
@@ -59,7 +59,7 @@ function copyName() {
 }
 
 .character-name {
-    transition: transform .2s;
+    transition: all .2s;
 }
 
 .character-img {
