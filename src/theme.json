@@ -1,0 +1,9 @@
+{
+    "token": {
+        "wireframe": false,
+        "borderRadius": 12,
+        "fontSize": 14,
+        "sizeStep": 5,
+        "colorPrimary": "#74bec9"
+    }
+}

@@ -51,7 +51,7 @@ function copyName() {
 }
 
 .character:hover {
-    border-color: #4096ff;
+    border-color: #5696a3;
     box-shadow: 0 2px 0 rgba(64, 150, 255, .02);
     transition: all .2s;
 }
