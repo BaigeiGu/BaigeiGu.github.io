@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 import { message } from 'ant-design-vue';
 
-const props = defineProps({ CharacterCardData: Object, la: String })
+const props = defineProps({ CharacterCardData: Object, nowlanguage: String })
 const name_index = ref(0)
 const long_limit = 12
 
@@ -19,15 +19,15 @@ function copyName() {
         <img class="character-img" :src="'character-images/' + props.CharacterCardData['image']" @click="changeName" />
         <span class="character-name" @click="copyName">
             <span class="character-name-zh" :class="{
-                'character-name-main': (props.la == 'zh'),
-                'character-name-text': (props.la == 'en'),
+                'character-name-main': (props.nowlanguage == 'zh'),
+                'character-name-text': (props.nowlanguage == 'en'),
                 'character-name-long': (props.CharacterCardData['name'][name_index]['zh'].length > long_limit)
             }">
                 {{ props.CharacterCardData['name'][name_index]['zh'] }}</span>
             <br />
             <span class="character-name-en" :class="{
-                'character-name-main': (props.la == 'en'),
-                'character-name-text': (props.la == 'zh'),
+                'character-name-main': (props.nowlanguage == 'en'),
+                'character-name-text': (props.nowlanguage == 'zh'),
                 'character-name-long': (props.CharacterCardData['name'][name_index]['en'].length > long_limit)
             }">{{
     props.CharacterCardData['name'][name_index]['en'] }}</span>
