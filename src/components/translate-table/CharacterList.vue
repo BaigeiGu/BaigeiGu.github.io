@@ -6,8 +6,9 @@ import { message } from 'ant-design-vue';
 import CharacterCard from './CharacterCard.vue';
 import axios from 'axios'
 
-const props = defineProps(['la', 'paw_file'])
+const props = defineProps(['la'])
 const CharactersData = ref({})
+
 const Characterslist = computed(() => {
     var result = []
     var characters = toRaw(CharactersData.value)['characters']
@@ -17,7 +18,6 @@ const Characterslist = computed(() => {
         result = CharactersData.value['characters']
     }
     else {
-
         characters.forEach(element => {
             if (element['tags'] != undefined) {
                 if (element['tags'].filter(item => selected.includes(item)).length != 0) {
@@ -26,25 +26,32 @@ const Characterslist = computed(() => {
             }
         });
     }
-
-
-
     return result
 })
 
 const SearchValue = ref([])
-const SearchOptions = ref([])
+const SearchOptions = computed(() => {
+    var cdata = toRaw(CharactersData.value)
+    
+    if (CharactersData.value['tags'] == undefined) {
+        return []
+    }
+
+    var ctags = Object.values(cdata['tags'])
+    var result = ctags.map((e) => ({ value: e[props.la] }))
+    console.log(result)
+    return result
+})
 
 function SecrchChange() {
 
 }
+
 onMounted(() => {
     axios.get('/characters.json').then(
         (res) => {
             CharactersData.value = res.data
-            if (Object.prototype.toString.call(CharactersData) == '[object Object]') {
-                SearchOptions.value = CharactersData.value['tags'].map((i) => ({ value: i }))
-            }
+            if (Object.prototype.toString.call(CharactersData) == '[object Object]') {}
             else {
                 message.error('Cannot read data.', 0)
             }

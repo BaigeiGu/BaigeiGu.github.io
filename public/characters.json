@@ -1,8 +1,14 @@
 {
-    "tags": [
-        "Lurendian",
-        "Pixiu"
-    ],
+    "tags": {
+        "鹿人店": {
+            "en": "Lurendian",
+            "zh": "鹿人店"
+        },
+        "貔貅": {
+            "en": "Pixiu",
+            "zh": "貔貅"
+        }
+    },
     "characters": [
         {
             "id": "sibuxiangdeer",
@@ -22,7 +28,8 @@
                 }
             ],
             "tags": [
-                "Lurendian"
+                "Lurendian",
+                "鹿人店"
             ]
         },
         {
@@ -54,7 +61,9 @@
             ],
             "tags": [
                 "Lurendian",
-                "Pixiu"
+                "Pixiu",
+                "鹿人店",
+                "貔貅"
             ]
         },
         {
@@ -67,7 +76,8 @@
                 }
             ],
             "tags": [
-                "Pixiu"
+                "Pixiu",
+                "貔貅"
             ]
         },
         {
