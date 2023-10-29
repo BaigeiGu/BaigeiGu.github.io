@@ -6,21 +6,20 @@ import Footer from './Footer.vue';
 
 import { ref } from 'vue';
 
-const la = ref('en')
+const nowlanguage = ref('en')
 
 function changeLa() {
-    la.value = (la.value == 'en') ? 'zh' : 'en'
+    nowlanguage.value = (nowlanguage.value == 'en') ? 'zh' : 'en'
 }
-
 
 </script>
 <template>
     <div class="TranslateTable">
-        <Header :la="la" @changeLa="changeLa" />
+        <Header :nowlanguage="nowlanguage" @changeLa="changeLa" />
         <a-divider />
-        <Characterslist :la="la" />
+        <Characterslist :nowlanguage="nowlanguage" />
         <a-divider />
-        <Footer :la="la" />
+        <Footer :nowlanguage="nowlanguage" />
     </div>
 </template>
 
