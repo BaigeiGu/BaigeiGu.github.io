@@ -1,7 +1,7 @@
 <script setup>
 import TranslateTable from './components/translate-table/TranslateTable.vue';
 import DarkmodeSwitch from './components/DarkmodeSwitch.vue';
-import Theme from './theme.json';
+import Theme from './antd-theme.json';
 
 </script>
 
