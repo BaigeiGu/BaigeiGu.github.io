@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, computed, toRaw } from 'vue';
 
 import { message } from 'ant-design-vue';
 
@@ -7,16 +7,46 @@ import CharacterCard from './CharacterCard.vue';
 import axios from 'axios'
 
 const props = defineProps(['la', 'paw_file'])
-var CharactersData = {}
-const Characterslist = ref([])
+const CharactersData = ref({})
+const Characterslist = computed(() => {
+    var result = []
+    var characters = toRaw(CharactersData.value)['characters']
+    var selected = toRaw(SearchValue.value)
 
+    if (CharactersData.value.length == 0 || SearchValue.value.length == 0) {
+        result = CharactersData.value['characters']
+    }
+    else {
+
+        characters.forEach(element => {
+            if (element['tags'] != undefined) {
+                if (element['tags'].filter(item => selected.includes(item)).length != 0) {
+                    result.push(element)
+                }
+            }
+        });
+    }
+
+
+
+    return result
+})
+
+const SearchValue = ref([])
+const SearchOptions = ref([])
+
+function SecrchChange() {
+
+}
 onMounted(() => {
     axios.get('/characters.json').then(
         (res) => {
-            CharactersData = res.data
-            if (Object.prototype.toString.call(CharactersData) == '[object Object]') { Characterslist.value = CharactersData['data'] }
+            CharactersData.value = res.data
+            if (Object.prototype.toString.call(CharactersData) == '[object Object]') {
+                SearchOptions.value = CharactersData.value['tags'].map((i) => ({ value: i }))
+            }
             else {
-                message.error('Cannot read data.',0)
+                message.error('Cannot read data.', 0)
             }
         }
     )
@@ -24,6 +54,8 @@ onMounted(() => {
 
 </script>
 <template>
+    <a-select v-model:value="SearchValue" mode="tags" style="width: 100%" placeholder="Search" :options="SearchOptions"
+        @change="SecrchChange" allowClear showSearch></a-select>
     <div class="characters-list">
         <CharacterCard v-for="character in Characterslist" :key="character['id']" v-bind:CharacterCardData="character"
             :la="props.la" />

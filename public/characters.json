@@ -1,5 +1,9 @@
 {
-    "data": [
+    "tags": [
+        "Lurendian",
+        "Pixiu"
+    ],
+    "characters": [
         {
             "id": "sibuxiangdeer",
             "image": "四不像-角色按钮用图.png",
@@ -16,6 +20,9 @@
                     "en": "Xiang",
                     "zh": "四不像"
                 }
+            ],
+            "tags": [
+                "Lurendian"
             ]
         },
         {
@@ -44,6 +51,10 @@
                     "en": "Pipi",
                     "zh": "皮皮"
                 }
+            ],
+            "tags": [
+                "Lurendian",
+                "Pixiu"
             ]
         },
         {
@@ -54,6 +65,9 @@
                     "en": "BiXie",
                     "zh": "辟邪"
                 }
+            ],
+            "tags": [
+                "Pixiu"
             ]
         },
         {
