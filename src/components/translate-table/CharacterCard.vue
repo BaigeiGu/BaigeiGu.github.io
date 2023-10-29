@@ -66,8 +66,8 @@ function copyName() {
     margin-right: 1em;
     transition: all .2s;
     border-radius: 1em 0 0 1em;
-    mask-image: radial-gradient(rgba(255, 255, 255, 255)60%, rgba(255, 255, 255, 0) 100%);
     -webkit-mask-image: radial-gradient(rgba(255, 255, 255, 255)60%, rgba(255, 255, 255, 0) 100%);
+    mask-image: radial-gradient(rgba(255, 255, 255, 255)60%, rgba(255, 255, 255, 0) 100%);
 }
 
 
