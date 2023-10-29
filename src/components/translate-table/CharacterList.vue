@@ -61,7 +61,7 @@ onMounted(() => {
 
 </script>
 <template>
-    <a-select v-model:value="SearchValue" mode="tags" style="width: 100%" placeholder="Filters" :options="SearchOptions"
+    <a-select v-model:value="SearchValue" mode="tags" style="width: 100%" :placeholder="(props.la=='en')?'Filters':'筛选'" :options="SearchOptions"
         @change="SecrchChange" allowClear showSearch></a-select>
     <div class="characters-list">
         <CharacterCard v-for="character in Characterslist" :key="character['id']" v-bind:CharacterCardData="character"
