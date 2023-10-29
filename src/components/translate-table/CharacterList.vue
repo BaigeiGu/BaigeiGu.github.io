@@ -6,7 +6,7 @@ import { message } from 'ant-design-vue';
 import CharacterCard from './CharacterCard.vue';
 import axios from 'axios'
 
-const props = defineProps(['la'])
+const props = defineProps(['nowlanguage'])
 const CharactersData = ref({})
 
 const Characterslist = computed(() => {
@@ -32,14 +32,14 @@ const Characterslist = computed(() => {
 const SearchValue = ref([])
 const SearchOptions = computed(() => {
     var cdata = toRaw(CharactersData.value)
-    
+
     if (CharactersData.value['tags'] == undefined) {
         return []
     }
 
-    var ctags = Object.values(cdata['tags'])
-    var result = ctags.map((e) => ({ value: e[props.la] }))
-    console.log(result)
+    var ctags = Object.keys(cdata['tags'])
+    var result = ctags.map((e) => ({ label: cdata['tags'][e][props.nowlanguage], value: e }))
+
     return result
 })
 
@@ -51,7 +51,7 @@ onMounted(() => {
     axios.get('/characters.json').then(
         (res) => {
             CharactersData.value = res.data
-            if (Object.prototype.toString.call(CharactersData) == '[object Object]') {}
+            if (Object.prototype.toString.call(CharactersData) == '[object Object]') { }
             else {
                 message.error('Cannot read data.', 0)
             }
@@ -61,11 +61,12 @@ onMounted(() => {
 
 </script>
 <template>
-    <a-select v-model:value="SearchValue" mode="tags" style="width: 100%" :placeholder="(props.la=='en')?'Filters':'筛选'" :options="SearchOptions"
-        @change="SecrchChange" allowClear showSearch></a-select>
+    <a-select v-model:value="SearchValue" mode="tags" style="width: 100%"
+        :placeholder="(props.nowlanguage == 'en') ? 'Filters' : '筛选'" :options="SearchOptions" @change="SecrchChange" allowClear
+        showSearch />
     <div class="characters-list">
         <CharacterCard v-for="character in Characterslist" :key="character['id']" v-bind:CharacterCardData="character"
-            :la="props.la" />
+            :nowlanguage="props.nowlanguage" />
     </div>
 </template>
 <style scoped>
