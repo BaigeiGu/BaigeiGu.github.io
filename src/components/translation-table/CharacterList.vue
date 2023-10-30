@@ -48,7 +48,7 @@ function SecrchChange() {
 }
 
 onMounted(() => {
-    axios.get('/characters.json').then(
+    axios.get('/translation-table/characters.json').then(
         (res) => {
             CharactersData.value = res.data
             if (Object.prototype.toString.call(CharactersData) == '[object Object]') { }

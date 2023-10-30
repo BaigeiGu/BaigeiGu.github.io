@@ -5,7 +5,7 @@ const paw_file = { en: 'sibuxiangpaw.png', zh: 'tianlupaw.png' }
 </script>
 <template>
     <header>
-        <img :src="paw_file[props.nowlanguage]" class="title-paw" @click="$emit('changeLa')">
+        <img :src="'translation-table/paws/'+paw_file[props.nowlanguage]" class="title-paw" @click="$emit('changeLa')">
         <h1>Youshouyan Translation table</h1>
         <h2>有兽焉译名表</h2>
         <p v-if="nowlanguage == 'en'">This translation table is made for easy communication. Chinese pinyin is preferred for
