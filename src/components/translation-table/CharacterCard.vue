@@ -16,7 +16,7 @@ function copyName() {
 </script>
 <template>
     <div class="character">
-        <img class="character-img" :src="'translation-table/character-images/' + props.CharacterCardData['image']" @click="changeName" />
+        <img class="character-img" lazyload="on" :src="'translation-table/character-images/' + props.CharacterCardData['image']" @click="changeName" />
         <span class="character-name" @click="copyName">
             <span class="character-name-zh" :class="{
                 'character-name-main': (props.nowlanguage == 'zh'),

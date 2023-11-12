@@ -1,6 +1,8 @@
 #app {
     font-family: MiSans, Harmony Sans SC, Noto Sans SC, sans-serif;
+    font-display: swap;
 }
+
 
 html {
     line-height: unset;

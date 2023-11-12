@@ -20,8 +20,8 @@ let switchDark = {
 window.matchMedia("(prefers-color-scheme: dark)").addListener(switchDark.dark);
 window.matchMedia("(prefers-color-scheme: light)").addListener(switchDark.light);
 </script>
-<!-- <template>
-    <a-button round @click.stop="toggleDark()">DarkMode</a-button>
-</template> -->
+<template>
+    <!-- <a-button round @click.stop="toggleDark()">DarkMode</a-button> -->
+</template>
 
     
